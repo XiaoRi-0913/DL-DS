@@ -1,7 +1,7 @@
 from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
 
-
+# modify by wong
 def full_connection():
     """
     全连接层对手写数字识别
