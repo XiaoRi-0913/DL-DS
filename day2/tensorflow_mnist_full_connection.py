@@ -1,6 +1,7 @@
 from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
 
+
 # modify by wong
 def full_connection():
     """
