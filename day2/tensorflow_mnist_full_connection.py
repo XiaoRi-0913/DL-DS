@@ -39,8 +39,8 @@ def full_connection():
             print("第%d次训练，损失值为%f" % (i + 1, loss))
 
     # 准确率计算
-        # 比较输出的结果最大值和真实值的最大值所在的位置 一致返回1 否则返回0 tf.argmax
-        # 求平均
+    # 比较输出的结果最大值和真实值的最大值所在的位置 一致返回1 否则返回0 tf.argmax
+    # 求平均
     return None
 
 
