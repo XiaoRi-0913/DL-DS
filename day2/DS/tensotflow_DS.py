@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
 from sklearn.decomposition import PCA
 from scipy import stats
