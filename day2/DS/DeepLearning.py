@@ -28,8 +28,6 @@ import numpy as np
 
 # 垃圾
 def linear_lasso(X_train, X_test, y_train, y_test):
-    print("x_train is =====",X_train)
-    print("y_train is", y_train)
     lasso = linear_model.Lasso(alpha=0.01)
     lasso.fit(X_train, y_train)
     y_hat = lasso.predict(X_test)
