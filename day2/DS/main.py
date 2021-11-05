@@ -6,7 +6,7 @@ import torchLearning as tl
 import utils
 
 if __name__ == '__main__':
-    X_train, X_test, y_train, y_test = dp.load_data(3)
+    X_train, X_test, y_train, y_test = dp.load_data(1)
     X_train, X_test = dp.snp_preselection(X_train, X_test, y_train)
     print("X_train shape is {}, Y_train shape is {}, X_test shape is {}, y_test shape is {}"
           .format(X_train.shape, y_train.shape, X_test.shape, y_test.shape))
