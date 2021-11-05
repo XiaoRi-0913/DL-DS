@@ -8,11 +8,11 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def load_data():
+def load_data(itrait):
     X = pd.read_csv('DATA/wheat.X', header=None, sep='\s+')
     Y = pd.read_csv('DATA/wheat.Y', header=None, sep='\s+')
-    itrait = 0
     X_train, X_test, y_train, y_test = train_test_split(X, Y[itrait], test_size=0.2, random_state=22)
+
     X = np.concatenate((X_train, X_test))  # 把训练集和测试集拼接
     pca = PCA(n_components=0.6)  # PCA 降维
     p = pca.fit(X).fit_transform(X)
@@ -27,7 +27,7 @@ def snp_preselection(X_train, X_test, y_train):
     pvals = np.array(pvals)
     N_best = 100
     snp_list = pvals.argsort()[-N_best:]
-    min_P_value = 1
+    min_P_value = 2
     snp_list = np.nonzero(pvals > min_P_value)
     X_train = X_train[X_train.columns[snp_list]]
     X_test = X_test[X_test.columns[snp_list]]

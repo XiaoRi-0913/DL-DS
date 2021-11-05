@@ -13,4 +13,7 @@ def convertToTensor(data):
         profile=None,
         sci_mode=False  # 用科学技术法显示数据，默认True
     )
-    return torch.from_numpy(np.array(data))
+    return torch.tensor(np.array(data), dtype=torch.float32)
+
+
+
